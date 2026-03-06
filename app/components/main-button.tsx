@@ -1,8 +1,7 @@
 'use client';
 
+import { mainMenuItem } from '@/types/main';
 import { useState } from 'react';
-
-type mainMenuItem = 'notification' | 'school-to-home';
 
 export default function MainButton({
   name,

@@ -5,8 +5,6 @@ import { useState } from 'react';
 import MainButton from './components/main-button';
 import MainMoreButton from './components/main-more-button';
 
-type mainMenuItem = 'notification' | 'school-to-home';
-
 export default function Home() {
   const [selectedItem, setSelectedItem] =
     useState<mainMenuItem>('notification');
