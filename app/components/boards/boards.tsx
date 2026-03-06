@@ -15,11 +15,13 @@ function BoardMenu({ menu, items }: { menu: mainMenuItem; items: Board[] }) {
   switch (menu) {
     case 'notification':
       if (notiItems.length <= 0) return <h1>공지사항이 없습니다.</h1>;
-      return notiItems.map((item) => <BoardItem key={item.id} item={item} />);
+      return notiItems.map((item) => (
+        <BoardItem key={item.id} item={item} category={item.category} />
+      ));
     case 'school-to-home':
       if (schoolToHomeItems.length <= 0) return <h1>가정통신문이 없습니다.</h1>;
       return schoolToHomeItems.map((item) => (
-        <BoardItem key={item.id} item={item} />
+        <BoardItem key={item.id} item={item} category={item.category} />
       ));
   }
 }
