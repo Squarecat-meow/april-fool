@@ -30,9 +30,10 @@ export default function Hero() {
           <Image
             src={'/seifuku-sailor.png'}
             alt="세라복 이미지"
-            width={200}
-            height={200}
+            width={80}
+            height={80}
             unoptimized
+            className="m-auto"
           />
         </div>
       </section>
