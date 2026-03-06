@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <>
-      <section className="w-2/3 h-fit flex items-end mt-2">
+    <section className="w-full bg-blue-100">
+      <article className="w-2/3 h-fit mx-auto flex items-end mt-2">
         <div className="w-24">
           <Image
             src={'/school-gakuran-couple.png'}
@@ -36,15 +36,15 @@ export default function Hero() {
             className="m-auto"
           />
         </div>
-      </section>
-      <section className="relative w-2/3 h-[24rem]">
+      </article>
+      <article className="relative w-2/3 h-[24rem] mx-auto">
         <Image
           src={'/school-drone-shot.png'}
           alt="월하고등학교 드론샷"
           fill
-          className="object-cover rounded-b-2xl"
+          className="object-cover rounded-t-2xl"
         />
-      </section>
-    </>
+      </article>
+    </section>
   );
 }

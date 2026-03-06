@@ -30,8 +30,8 @@ export default function Boards({ items }: { items: Board[] }) {
   const [selectedItem, setSelectedItem] =
     useState<mainMenuItem>('notification');
   return (
-    <main className="w-full flex flex-col items-center gap-4">
-      <section className="w-2/3 mt-6 flex justify-between items-center">
+    <section className="w-full flex flex-col items-center gap-4">
+      <article className="w-2/3 mt-6 flex justify-between items-center">
         <div className="flex items-center gap-4">
           <MainButton
             name="notification"
@@ -50,10 +50,10 @@ export default function Boards({ items }: { items: Board[] }) {
           </MainButton>
         </div>
         <MainMoreButton>more</MainMoreButton>
-      </section>
-      <section className="w-2/3 h-fit grid grid-cols-3">
+      </article>
+      <article className="w-2/3 h-fit grid grid-cols-3">
         <BoardMenu menu={selectedItem} items={items} />
-      </section>
-    </main>
+      </article>
+    </section>
   );
 }

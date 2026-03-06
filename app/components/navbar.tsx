@@ -11,14 +11,14 @@ export default function Navbar() {
     <nav className="w-full h-12 flex justify-center bg-indigo-400 text-white">
       <ul className="w-2/3 flex justify-between items-center">
         {navbarItems.map((el) => (
-          <section key={el.id}>
-            <li
+          <li key={el.id}>
+            <div
               className="cursor-pointer"
               onMouseEnter={() => setHoveredItem(el.id)}
               onMouseLeave={() => setHoveredItem(null)}
             >
               {el.name}
-            </li>
+            </div>
             {(hoveredItem === el.id || hoveredMenu === el.id) && (
               <ul
                 className="absolute min-w-36 p-2 z-[1] space-y-1 border-2 border-indigo-700 bg-white rounded-2xl"
@@ -34,7 +34,7 @@ export default function Navbar() {
                 ))}
               </ul>
             )}
-          </section>
+          </li>
         ))}
       </ul>
     </nav>

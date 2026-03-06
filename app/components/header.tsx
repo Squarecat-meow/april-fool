@@ -54,7 +54,7 @@ export default function Header() {
               key={el.id}
               className="flex gap-2 items-center"
             >
-              <li className="text-slate-600">
+              <li className="text-sm text-slate-600">
                 <p>{el.name}</p>
               </li>
               {el.id < headerItems.length && (
@@ -62,7 +62,7 @@ export default function Header() {
               )}
             </Link>
           ))}
-          <div className="w-48 border-2 border-indigo-700">
+          <div className="w-48 ml-4 border-2 border-indigo-700">
             <form className="flex">
               <input type="text" placeholder="검색" className="w-full m-1" />
               <button className="bg-indigo-700 p-2">
