@@ -4,7 +4,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <section className="w-full">
       <PageHeader />
-      {children}
+      <article className="w-2/3 mx-auto">{children}</article>
     </section>
   );
 }
