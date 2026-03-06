@@ -12,3 +12,13 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+model Board {
+  id          Int      @unique @default(autoincrement())
+  category    String
+  title       String
+  body        String?
+  attatchment String?
+  createdAt   DateTime @default(now())
+  clickCount  Int
+}
