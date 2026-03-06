@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Hero() {
   return (
     <>
-      <section className="w-2/3 h-fit flex items-end">
+      <section className="w-2/3 h-fit flex items-end mt-2">
         <div className="w-24">
           <Image
             src={'/school-gakuran-couple.png'}

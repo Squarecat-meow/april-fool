@@ -27,7 +27,7 @@ export default function Header() {
   ];
   return (
     <header className="w-full flex justify-center mt-2">
-      <section className="w-2/3 flex justify-between items-center">
+      <section className="w-2/3 flex justify-between items-center mb-2">
         <Link href={'/'}>
           <div className="flex items-center gap-2">
             <div className="w-12 aspect-square">

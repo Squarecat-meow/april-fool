@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={`${notoSans.variable} antialiased space-y-2`}>
+      <body className={`${notoSans.variable} antialiased`}>
         <Header />
         <Navbar />
         {children}
