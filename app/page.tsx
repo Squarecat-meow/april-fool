@@ -1,8 +1,15 @@
 'use client';
 
 import Image from 'next/image';
+import { useState } from 'react';
+import MainButton from './components/main-button';
+import MainMoreButton from './components/main-more-button';
+
+type mainMenuItem = 'notification' | 'school-to-home';
 
 export default function Home() {
+  const [selectedItem, setSelectedItem] =
+    useState<mainMenuItem>('notification');
   return (
     <main className="w-full flex flex-col items-center">
       <section className="w-2/3 h-fit flex items-end">
@@ -43,7 +50,27 @@ export default function Home() {
           fill
           className="object-cover rounded-b-2xl"
         />
-      </div>
+      </section>
+      <section className="w-2/3 mt-6 flex justify-between items-center">
+        <div className="flex items-center gap-4">
+          <MainButton
+            name="notification"
+            isSelected={selectedItem === 'notification' ? true : false}
+            setSelectedName={setSelectedItem}
+          >
+            공지사항
+          </MainButton>
+          <div className="w-6 border-b border-b-slate-600" />
+          <MainButton
+            name="school-to-home"
+            isSelected={selectedItem === 'school-to-home' ? true : false}
+            setSelectedName={setSelectedItem}
+          >
+            가정통신문
+          </MainButton>
+        </div>
+        <MainMoreButton>more</MainMoreButton>
+      </section>
     </main>
   );
 }
