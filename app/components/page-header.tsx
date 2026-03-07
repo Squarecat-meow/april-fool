@@ -1,9 +1,11 @@
+'use client';
+
 import Image from 'next/image';
 
 export default function PageHeader() {
   return (
-    <div className="w-full h-fit pt-4 bg-blue-100">
-      <section className="w-2/3 h-fit relative mx-auto flex items-center gap-2">
+    <div className="w-full h-fit relative pt-4 mb-6 bg-blue-100">
+      <section className="w-2/3 h-fit relative mx-auto flex items-start gap-2">
         <div className="w-1/2">
           <h1 className="text-4xl/tight font-light">
             <span className="font-black">자유</span>와{' '}

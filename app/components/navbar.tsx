@@ -21,7 +21,7 @@ export default function Navbar() {
             </div>
             {(hoveredItem === el.id || hoveredMenu === el.id) && (
               <ul
-                className="absolute min-w-36 p-2 z-[1] space-y-1 border-2 border-indigo-700 bg-white rounded-2xl"
+                className="absolute min-w-36 p-2 z-[2] space-y-1 border-2 border-indigo-700 bg-white rounded-2xl"
                 onMouseEnter={() => setHoveredMenu(el.id)}
                 onMouseLeave={() => setHoveredMenu(null)}
               >
