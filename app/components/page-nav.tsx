@@ -3,7 +3,7 @@ import { Home } from 'lucide-react';
 
 export default function PageNavbar({ path }: { path: string }) {
   const parent = navbarItems.find((el) =>
-    el.subcategory.some((el) => el.href === path),
+    el.subcategory.find((el) => el.href === path),
   );
   const child = parent?.subcategory.find((el) => el.href === path);
 
@@ -14,7 +14,7 @@ export default function PageNavbar({ path }: { path: string }) {
       </button>
       <div className="h-12 py-3 flex items-center">
         <select
-          defaultValue={parent?.id}
+          defaultValue={parent?.name}
           className="m-2 w-36 flex items-center text-white"
         >
           {navbarItems.map((item) => (
@@ -25,7 +25,7 @@ export default function PageNavbar({ path }: { path: string }) {
         </select>
         <div className="border-r border-r-gray-300 h-full" />
         <select
-          defaultValue={child?.id}
+          defaultValue={child?.name}
           className="m-2 w-36 flex items-center text-white"
         >
           {parent?.subcategory.map((item) => (
