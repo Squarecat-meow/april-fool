@@ -34,14 +34,14 @@ export default function Page() {
           <Timeline.Text>로컬 노트 100,000개 돌파</Timeline.Text>
         </Timeline.Element>
         <Timeline.Line />
-        <Timeline.Element direction="left">
-          <Timeline.Date>2025.10.27</Timeline.Date>
-          <Timeline.Text>학생 수 100명 돌파</Timeline.Text>
-        </Timeline.Element>
-        <Timeline.Line />
         <Timeline.Element direction="right">
           <Timeline.Date>2025.9.3</Timeline.Date>
           <Timeline.Text>월하고등학교 2주년</Timeline.Text>
+        </Timeline.Element>
+        <Timeline.Line />
+        <Timeline.Element direction="left">
+          <Timeline.Date>2025.10.27</Timeline.Date>
+          <Timeline.Text>학생 수 100명 돌파</Timeline.Text>
         </Timeline.Element>
         <Timeline.Line />
         <Timeline.Element direction="left">
