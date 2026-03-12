@@ -22,3 +22,8 @@ model Board {
   createdAt   DateTime @default(now())
   clickCount  Int
 }
+
+model Visit {
+  id        Int      @id @default(autoincrement())
+  visitedAt DateTime @default(now())
+}
