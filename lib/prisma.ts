@@ -3,8 +3,11 @@ import { PrismaClient } from "@/generated/prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
 import { Pool } from "pg";
 
+const url = new URL(process.env.POSTGRES_PRISMA_URL!);
+url.searchParams.set("sslmode", "no-verify");
+
 const pool = new Pool({
-  connectionString: process.env.POSTGRES_PRISMA_URL!,
+  connectionString: url.toString(),
   ssl: { rejectUnauthorized: false },
 });
 
