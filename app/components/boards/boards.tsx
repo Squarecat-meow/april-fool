@@ -8,9 +8,11 @@ import { mainMenuItem } from '@/types/main';
 import BoardItem from './item';
 
 function BoardMenu({ menu, items }: { menu: mainMenuItem; items: Board[] }) {
-  const notiItems = items.filter((item) => item.category === 'notification');
+  const notiItems = items.filter(
+    (item) => item.category === '/noti/notification',
+  );
   const schoolToHomeItems = items.filter(
-    (item) => item.category === 'school-to-home',
+    (item) => item.category === '/noti/school-to-home',
   );
   switch (menu) {
     case 'notification':
