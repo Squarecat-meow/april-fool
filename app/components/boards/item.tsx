@@ -10,16 +10,16 @@ export default function BoardItem({
   category: string;
 }) {
   return (
-    <Link href={`/noti/${category}/${item.id}`}>
+    <Link href={`${category}/${item.id}`}>
       <div className="p-6 rounded-2xl border border-gray-300 transition-shadow shadow hover:shadow-lg">
         <h1 className="mb-2 font-bold">
           {item.title.length > 12
-            ? item.title.substring(12).concat('...')
+            ? item.title.substring(0, 12).concat('...')
             : item.title}
         </h1>
         <p className="mb-6 text-sm text-gray-600">
           {item.body && item.body.length > 30
-            ? item.body?.substring(30).concat('...')
+            ? item.body?.substring(0, 60).concat('...')
             : item.body}
         </p>
         <div className="flex gap-2 items-center">
