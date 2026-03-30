@@ -1,6 +1,8 @@
-import { prisma } from '@/lib/prisma';
-import Hero from './components/hero';
-import Boards from './components/boards/boards';
+import { prisma } from "@/lib/prisma";
+import Hero from "./components/hero";
+import Boards from "./components/boards/boards";
+
+export const dynamic = "force-dynamic";
 
 export default async function Home() {
   const boardItem = await prisma.board.findMany();
