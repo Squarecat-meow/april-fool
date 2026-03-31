@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Noto_Sans_KR } from 'next/font/google';
 import './globals.css';
 import Header from './components/header';
@@ -9,6 +9,10 @@ const notoSans = Noto_Sans_KR({
   variable: '--font-noto-sans',
   weight: ['100', '400', '700', '900'],
 });
+
+export const viewport: Viewport = {
+  width: 1120,
+};
 
 export const metadata: Metadata = {
   title: '월하고등학교의 홈페이지',
